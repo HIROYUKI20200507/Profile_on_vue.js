@@ -1,0 +1,226 @@
+// ==============================
+// allデザイン
+// ==============================
+html {
+    scroll-behavior: smooth;
+}
+
+.contents-width {
+    margin: auto;
+    width: 80vw;
+}
+
+.transition-enter,
+.transition-leave-to {
+    opacity: 0;
+
+}
+.transition-enter-active,
+.transition-leave-active {
+    transition: opacity 3s;
+}
+
+// ==============================
+// TopVideo.vueデザイン
+// ==============================
+
+.top-video-title {
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 3px #F3F4F6;
+        display: inline-block;
+        width: 95vw;
+        height: 95vh;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 3px #F3F4F6;
+        display: inline-block;
+        width: 94vw;
+        height: 93vh;
+        z-index: 2;
+    }
+
+
+    &-main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// ==============================
+// NavBer.vueデザイン
+// ==============================
+
+// ==============================
+// Profile.vueデザイン
+// ==============================
+.profile-main {
+    width: 80vw;
+
+    .profile-img {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            background-color: #4383CD;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 98%;
+            height: 107%;
+        }
+
+        .img-style {
+            width: 120%;
+            height: 600px;
+        }
+    }
+
+    .profile-contents {
+        padding: 30px;
+        margin-left: -15%;
+        z-index: 3;
+
+        .profile-name {
+            color: #4A82CC;
+            font-weight: bold;
+        }
+
+        .title-sub-item {
+            word-break: keep-all;
+        }
+    }
+}
+
+// ==============================
+// Service.vueデザイン
+// ==============================
+.perf-top {
+    width: 80vw;
+    margin: auto;
+
+    &-item {
+
+        .perf-top-layout {
+
+            .perf-img {
+                box-shadow: 20px 20px 0 #4A82CC;
+            }
+
+            .perf-contents {
+
+                .contents-main {
+                    position: relative;
+
+                    &::after {
+                        animation: 1s arrow-animation infinite;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 40%;
+                        left: 120px;
+                        width: 90px;
+                        height: 10px;
+                        border-top: 1px solid #6B7380;
+                        border-left: 1px solid transparent;
+                        border-right: 1px solid transparent;
+                    }
+
+                    &::before {
+                        animation: 1s arrow-left-animation infinite;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 31%;
+                        left: 197px;
+                        width: 12px;
+                        height: 10px;
+                        border-top: 1px solid #6B7380;
+                        border-left: 1px solid transparent;
+                        border-right: 1px solid transparent;
+                        transform: rotate(45deg);
+                    }
+
+                    .layout-radius {
+                        position: relative;
+                        position: absolute;
+                        width: 100px;
+                        height: 100px;
+                        display: block;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 40%;
+                            height: 40%;
+                            border: #6B7380 solid 1px;
+                            border-radius: 100%;
+                            left: 95%;
+                            top: 1%;
+                        }
+                    }
+
+                }
+
+                .contents-sub {
+
+                    .contents-sub-span {
+                        border-bottom: #6B7380 solid 1px;
+                    }
+                }
+            }
+        }
+
+        .pref-sub-img {
+            .sub-title {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 140%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 10%;
+                    border-bottom: #6B7380 solid 3px;
+                }
+
+            }
+        }
+    }
+}
+@keyframes arrow-animation {
+    0% {
+        width: 1em;
+    }
+    100% {
+        width: 3em;
+    }
+}
+@keyframes arrow-left-animation {
+    0% {
+        margin-left: -2em;
+    }
+    100% {
+        margin-left: 0.02em;
+    }
+}
+
+// ==============================
+// FooterBar.vueデザイン
+// ==============================
+
